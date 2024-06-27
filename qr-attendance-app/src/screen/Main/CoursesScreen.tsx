@@ -21,7 +21,7 @@ const Cursos = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://192.168.2.103:3000/api/estudiantes');
+      const response = await fetch('http://192.168.181.244:3000/api/estudiantes');
       const data = await response.json();
       setStudents(data.data);
     } catch (error) {
@@ -46,7 +46,7 @@ const Cursos = () => {
     const updatedStudentData = { Registro: editStudentStatus };
 
     try {
-      const response = await fetch(`http://192.168.2.103:3000/api/estudiantes/${studentToEdit.Documento}`, {
+      const response = await fetch(`http://192.168.181.244:3000/api/estudiantes/${studentToEdit.Documento}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
